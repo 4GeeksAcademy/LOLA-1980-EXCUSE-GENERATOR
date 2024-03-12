@@ -4,6 +4,7 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+import { clippingParents } from "@popperjs/core";
 
 /*window.onload = function() {
   //write your code here
@@ -13,11 +14,14 @@ import "./assets/img/4geeks.ico";
 };*/
 
 window.onload = function() {
-  document.querySelector("#btn").addEventListener("click", () => {
+  document.querySelector("#button").addEventListener("click", () => {
     document.querySelector("#excuse").innerHTML = generateExcuse();
   });
   //write your code here
   console.log("Hello Rigo from the console!");
+
+  let excusePhrase = document.getElementById("excuse");
+  console.log({ excusePhrase });
 };
 
 let generateExcuse = () => {
